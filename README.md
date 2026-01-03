@@ -19,8 +19,8 @@ Rather than focusing on raw prediction accuracy, the analysis emphasizes:
 The work is structured into three notebooks:
 
 1. **Exploratory Data Analysis (EDA) & Risk Insights**  
-2. **Data Preprocessing & Logistic Regression**  
-3. **Random Forest Modeling & Threshold Tuning**
+2. **Data Preprocessing**  
+3. **Logistic Regression**
 
 
 ## Dataset Summary
@@ -104,44 +104,6 @@ Processed datasets saved as:
 
 **Interpretation:**  
 Logistic Regression provides **clear directional insights** and serves as a transparent baseline for risk explanation.
-
-
-## Notebook 4: Random Forest Modeling & Threshold Tuning
-
-### Objective
-
-Compare performance against a more flexible, non-linear model.
-
-### Random Forest Model
-
-- Class-weighted
-- Evaluated using PR-AUC
-- Same train/test split as Logistic Regression
-
-#### Results
-
-- **PR-AUC:** ~0.87  
-- At ~80% recall:
-  - **Precision:** ~95%
-  - Significantly fewer false positives than Logistic Regression
-
-
-### Key Observation
-
-The Precision–Recall curve remains near **100% precision** for much higher recall values compared to Logistic Regression, indicating superior separation of fraud vs normal transactions.
-
-**Trade-off:**
-
-- Higher performance  
-- Reduced interpretability compared to Logistic Regression  
-
-
-## Model Comparison Summary
-
-| Model               | PR-AUC |
-|--------------------|--------|
-| Logistic Regression | ~0.72  |
-| Random Forest       | ~0.87  |
 
 
 ## Key Takeaways (Risk & Business Perspective)
